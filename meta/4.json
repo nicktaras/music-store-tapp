@@ -1,0 +1,36 @@
+{
+  "name": "Alternatie Layers",
+  "description": "Dive into the captivating soundscape of Alternative Layers, a track that playfully dances with its own rhythms.",
+  "artist": {
+    "name": "Out of Sync",
+    "contact": {
+      "email": "",
+      "website": ""
+    }
+  },
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Electronic Dance Music"
+    },
+    {
+      "trait_type": "Release Date",
+      "value": "14-10-2024"
+    },
+    {
+      "trait_type": "Duration",
+      "value": "3:20"
+    },
+    {
+      "trait_type": "Label",
+      "value": "Independent"
+    }
+  ],
+  "media": {
+    "audio": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/out-of-sync_alternative-layers.mp3",
+    "artwork": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/out-of-sync_alternative-layers.webp"
+  },
+  "image": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/out-of-sync_alternative-layers.webp",
+  "animation_url": "https://viewer.tokenscript.org/?viewType=opensea&chain=11155111&contract=0x53055c56A46601C768C74948a6e5f05Ed6bE6dc6&tokenId=4",
+  "external_url": ""
+}

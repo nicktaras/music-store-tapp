@@ -1,0 +1,36 @@
+{
+  "name": "Want You Here Tonight",
+  "description": "After Hours - Want You Here Tonight is an infectious, high-energy track that brings the vibrant spirit of Ibiza to life.",
+  "artist": {
+    "name": "After Hours",
+    "contact": {
+      "email": "",
+      "website": ""
+    }
+  },
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Electronic Dance Music"
+    },
+    {
+      "trait_type": "Release Date",
+      "value": "14-10-2024"
+    },
+    {
+      "trait_type": "Duration",
+      "value": "3:53"
+    },
+    {
+      "trait_type": "Label",
+      "value": "Independent"
+    }
+  ],
+  "media": {
+    "audio": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/after-hours_want-you-here-tonight.mp3",
+    "artwork": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/after-hours_want-you-here-tonight.webp"
+  },
+  "image": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/after-hours_want-you-here-tonight.webp",
+  "animation_url": "https://viewer.tokenscript.org/?viewType=opensea&chain=11155111&contract=0x53055c56A46601C768C74948a6e5f05Ed6bE6dc6&tokenId=1",
+  "external_url": ""
+}

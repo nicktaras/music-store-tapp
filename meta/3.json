@@ -1,0 +1,36 @@
+{
+  "name": "Dance the Night Away",
+  "description": "Featuring captivating female vocals, this track invites you to lose yourself on the dance floor and embrace your true essence. Track contains pulsating rhythms and euphoric melodies.",
+  "artist": {
+    "name": "Neon Beats",
+    "contact": {
+      "email": "",
+      "website": ""
+    }
+  },
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Electronic Dance Music"
+    },
+    {
+      "trait_type": "Release Date",
+      "value": "14-10-2024"
+    },
+    {
+      "trait_type": "Duration",
+      "value": "3:58"
+    },
+    {
+      "trait_type": "Label",
+      "value": "Independent"
+    }
+  ],
+  "media": {
+    "audio": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/neonbeats_dance-the-night-away.mp3",
+    "artwork": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/neonbeats_dance-the-night-away.jpeg"
+  },
+  "image": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/neonbeats_dance-the-night-away.jpeg",
+  "animation_url": "https://viewer.tokenscript.org/?viewType=opensea&chain=11155111&contract=0x53055c56A46601C768C74948a6e5f05Ed6bE6dc6&tokenId=3",
+  "external_url": ""
+}

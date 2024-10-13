@@ -1,0 +1,36 @@
+{
+  "name": "Sunshine State",
+  "description": "Feel the warmth of Sunshine State, a chill drum and bass track by Solar Groove that radiates positivity and relaxation.",
+  "artist": {
+    "name": "Solar Groove",
+    "contact": {
+      "email": "",
+      "website": ""
+    }
+  },
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Electronic Dance Music"
+    },
+    {
+      "trait_type": "Release Date",
+      "value": "14-10-2024"
+    },
+    {
+      "trait_type": "Duration",
+      "value": "6:01"
+    },
+    {
+      "trait_type": "Label",
+      "value": "Independent"
+    }
+  ],
+  "media": {
+    "audio": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/solar-groove_sunshine-state.mp3",
+    "artwork": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/solar-groove_sunshine-state.webp"
+  },
+  "image": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/solar-groove_sunshine-state.webp",
+  "animation_url": "https://viewer.tokenscript.org/?viewType=opensea&chain=11155111&contract=0x53055c56A46601C768C74948a6e5f05Ed6bE6dc6&tokenId=5",
+  "external_url": ""
+}

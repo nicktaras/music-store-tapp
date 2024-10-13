@@ -1,0 +1,36 @@
+{
+  "name": "Chillscape",
+  "description": "Immerse yourself in the tranquil vibes of Chillscape, a mellow house track that effortlessly blends subtle sounds with an inviting atmosphere. Crafted by Lazy Days.",
+  "artist": {
+    "name": "Lazy Days",
+    "contact": {
+      "email": "",
+      "website": ""
+    }
+  },
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Electronic Dance Music"
+    },
+    {
+      "trait_type": "Release Date",
+      "value": "14-10-2024"
+    },
+    {
+      "trait_type": "Duration",
+      "value": "3:51"
+    },
+    {
+      "trait_type": "Label",
+      "value": "Independent"
+    }
+  ],
+  "media": {
+    "audio": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/lazy-dayz_chillscape.mp3",
+    "artwork": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/lazy-days_chillscape.jpg"
+  },
+  "image": "https://gateway.pinata.cloud/ipfs/QmY4bkmgydgkMiVDr4uPNCVk34XuKDvZoGLR7qM8QEye98/lazy-days_chillscape.jpg",
+  "animation_url": "https://viewer.tokenscript.org/?viewType=opensea&chain=11155111&contract=0x53055c56A46601C768C74948a6e5f05Ed6bE6dc6&tokenId=2",
+  "external_url": ""
+}
