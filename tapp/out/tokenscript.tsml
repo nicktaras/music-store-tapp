@@ -144,7 +144,7 @@ p.light {
 			<ts:transaction>
 				<ethereum:transaction as="uint" contract="Token" function="purchase">
 					<ts:data>
-						<ts:uint256>0.001</ts:uint256> 
+						<ts:uint256>1000000000000000</ts:uint256>
 						<ts:uint256 ref="tokenId"/>
 					</ts:data>
 				</ethereum:transaction>
