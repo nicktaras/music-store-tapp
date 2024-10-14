@@ -6,7 +6,6 @@ import "@openzeppelin/contracts@5.0.2/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts@5.0.2/token/ERC1155/extensions/ERC1155Burnable.sol";
 import "@openzeppelin/contracts@5.0.2/access/Ownable.sol";
 import "@openzeppelin/contracts@5.0.2/token/ERC1155/extensions/ERC1155Supply.sol";
-import "@openzeppelin/contracts@5.0.2/utils/Strings.sol";
 import "./ERC5169.sol";
 
 contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
@@ -22,7 +21,8 @@ contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
     event Withdrawn(address indexed owner, uint256 amount);
     event ArtistSet(uint256 indexed id, address indexed artist);
 
-    uint256 public constant MUSIC_PRICE = 0.001 ether;
+    // Set price in wei directly (e.g., 0.001 ether = 1e15 wei)
+    uint256 public constant MUSIC_PRICE = 1000000000000000;  // 1e15 wei (0.001 ether)
 
     constructor(address initialOwner) ERC1155("") Ownable(initialOwner) {}
 
@@ -32,7 +32,6 @@ contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
 
     function setScriptURI(string[] memory newScriptURI) external onlyOwner override {
         _scriptURI = newScriptURI;
-
         emit ScriptUpdate(newScriptURI);
     }
 
@@ -40,51 +39,37 @@ contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
         _setURI(newuri);
     }
 
-    function uri(uint256 id) public view override returns (string memory) {
-        require(exists(id), "URI query for nonexistent token");
-
-        string memory baseUri = super.uri(id);
-        require(bytes(baseUri).length > 0, "Base URI is empty");
-
-        // Use OpenZeppelin's Strings library for ID conversion
-        string memory tokenIdStr = Strings.toString(id); // Ensure to import Strings from OpenZeppelin
-        string memory completeUri = string(abi.encodePacked(baseUri, tokenIdStr, ".json"));
-
-        require(bytes(completeUri).length > 0, "Concatenated URI is empty");
-        return completeUri;
-    }
-
     function setArtist(uint256 id, address artistAddr) external onlyOwner {
         artists[id] = artistAddr;
         emit ArtistSet(id, artistAddr);
     }
 
-    function mint(address account, uint256 id, uint256 amount, bytes memory data, address artistAddr)
-        public
-        onlyOwner
-    {
+    function mint(address account, uint256 id, uint256 amount, bytes memory data, address artistAddr) public onlyOwner {
+        require(artistAddr != address(0), "Invalid artist address"); // Check for non-zero artist address
         _mint(account, id, amount, data);
         artists[id] = artistAddr;
-        emit MusicMinted(account, id, amount);
+        emit MusicMinted(account, id, amount); 
     }
 
-    function mint(address account, uint256 id, uint256 amount, bytes memory data)
-        public
-        onlyOwner
+    function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data, address[] memory artistAddrs) 
+    external onlyOwner 
     {
-        _mint(account, id, amount, data);
-        emit MusicMinted(account, id, amount);
-    }
-
-    function mintBatch(address to, uint256[] memory ids, uint256[] memory amounts, bytes memory data) external onlyOwner {
+        require(ids.length == artistAddrs.length, "IDs and artist addresses length mismatch");
+        
         _mintBatch(to, ids, amounts, data);
+        
         for (uint256 i = 0; i < ids.length; i++) {
+            // Set artist for each token ID, defaulting to the owner if artist address is zero
+            artists[i] = artistAddrs[i];
+            
+            // Emit MusicMinted event for each token
             emit MusicMinted(to, ids[i], amounts[i]);
         }
     }
 
+    // When purchasing, expect the payment in wei directly
     function purchase(uint256 id) external payable {
-        require(msg.value == 1 * MUSIC_PRICE, "Incorrect payment amount.");
+        require(msg.value == MUSIC_PRICE, "Incorrect payment amount.");  // msg.value is in wei
         require(balanceOf(owner(), id) >= 1, "Not enough supply.");
         
         // Transfer music track to buyer
@@ -144,7 +129,6 @@ contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
         // Emit event to notify that music has been removed
         emit MusicRemoved(msg.sender, id, amount);
     }
-
 
     // The following functions are overrides required by Solidity.
 

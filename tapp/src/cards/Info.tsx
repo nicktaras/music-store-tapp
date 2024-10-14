@@ -87,6 +87,7 @@ export const Info: React.FC = ({ token }) => {
               <Button className='mr-1'>⭐️</Button>
               <Button className='mr-1'>★</Button>
           </CardContent>
+      <p className='text-center my-4'>4.5 stars (4.5k)</p>
     </div>
   );
 };
