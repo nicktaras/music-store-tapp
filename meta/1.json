@@ -1,6 +1,6 @@
 {
-  "name": "Want You Here Tonight",
-  "description": "After Hours - Want You Here Tonight is an infectious, high-energy track that brings the vibrant spirit of Ibiza to life.",
+  "name": "Want You Here Tonight by After Hours",
+  "description": "Want You Here Tonight is an infectious, high-energy track that brings the vibrant spirit of Ibiza to life.",
   "artist": {
     "name": "After Hours",
     "contact": {
@@ -9,6 +9,14 @@
     }
   },
   "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "After Hours"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Music Single"
+    },
     {
       "trait_type": "Genre",
       "value": "Electronic Dance Music"

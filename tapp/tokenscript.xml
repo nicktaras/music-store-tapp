@@ -38,22 +38,50 @@
 				<ts:viewContent name="common"/>
 			</ts:view>
 		</ts:card>
+				
+		<ts:card type="action" name="Purchase" origins="Token">
 
-		<ts:card type="action" name="Mint">
 			<ts:label>
-				<ts:string xml:lang="en">Mint</ts:string>
+				<ts:string xml:lang="en">Purchase</ts:string>
 			</ts:label>
+
 			<ts:transaction>
-				<ethereum:transaction contract="Token" function="safeMint">
+				<ethereum:transaction contract="Token" function="purchase" as="uint">
 					<ts:data>
+						<ts:uint256>0.001</ts:uint256> <!-- purchaseAmount needs update of contract to Wei -->
+						<ts:uint256 ref="tokenId"/>
 					</ts:data>
 				</ethereum:transaction>
 			</ts:transaction>
-			<ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" urlFragment="mint">
+
+			<ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" urlFragment="purchase">
 				<ts:viewContent name="common"/>
 			</ts:view>
 		</ts:card>
-
 	</ts:cards>
+
+	<ts:attribute name="purchaseAmount">
+		<ts:type>
+			<ts:syntax></ts:syntax>
+		</ts:type>
+		<ts:label>
+			<ts:string xml:lang="en">purchase amount</ts:string>
+		</ts:label>
+		<ts:origins>
+			<ts:user-entry as="uint"/>
+		</ts:origins>
+	</ts:attribute>
+
+	<ts:attribute name="tokenId">
+		<ts:type>
+			<ts:syntax></ts:syntax>
+		</ts:type>
+		<ts:label>
+			<ts:string xml:lang="en">token Id</ts:string>
+		</ts:label>
+		<ts:origins>
+			<ts:user-entry as="uint"/>
+		</ts:origins>
+	</ts:attribute>
 
 </ts:token>

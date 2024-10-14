@@ -6,6 +6,7 @@ import "@openzeppelin/contracts@5.0.2/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts@5.0.2/token/ERC1155/extensions/ERC1155Burnable.sol";
 import "@openzeppelin/contracts@5.0.2/access/Ownable.sol";
 import "@openzeppelin/contracts@5.0.2/token/ERC1155/extensions/ERC1155Supply.sol";
+import "@openzeppelin/contracts@5.0.2/utils/Strings.sol";
 import "./ERC5169.sol";
 
 contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
@@ -39,6 +40,20 @@ contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
         _setURI(newuri);
     }
 
+    function uri(uint256 id) public view override returns (string memory) {
+        require(exists(id), "URI query for nonexistent token");
+
+        string memory baseUri = super.uri(id);
+        require(bytes(baseUri).length > 0, "Base URI is empty");
+
+        // Use OpenZeppelin's Strings library for ID conversion
+        string memory tokenIdStr = Strings.toString(id); // Ensure to import Strings from OpenZeppelin
+        string memory completeUri = string(abi.encodePacked(baseUri, tokenIdStr, ".json"));
+
+        require(bytes(completeUri).length > 0, "Concatenated URI is empty");
+        return completeUri;
+    }
+
     function setArtist(uint256 id, address artistAddr) external onlyOwner {
         artists[id] = artistAddr;
         emit ArtistSet(id, artistAddr);
@@ -49,7 +64,6 @@ contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
         onlyOwner
     {
         _mint(account, id, amount, data);
-        address finalArtistAddr = artistAddr != address(0) ? artistAddr : owner();
         artists[id] = artistAddr;
         emit MusicMinted(account, id, amount);
     }
@@ -130,6 +144,7 @@ contract Muta is ERC1155, IERC5169, ERC1155Burnable, Ownable, ERC1155Supply {
         // Emit event to notify that music has been removed
         emit MusicRemoved(msg.sender, id, amount);
     }
+
 
     // The following functions are overrides required by Solidity.
 

@@ -1,5 +1,5 @@
 {
-  "name": "Dance the Night Away",
+  "name": "Dance the Night Away by Neon Beats",
   "description": "Featuring captivating female vocals, this track invites you to lose yourself on the dance floor and embrace your true essence. Track contains pulsating rhythms and euphoric melodies.",
   "artist": {
     "name": "Neon Beats",
@@ -9,6 +9,14 @@
     }
   },
   "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Neon Beats"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Music Single"
+    },
     {
       "trait_type": "Genre",
       "value": "Electronic Dance Music"

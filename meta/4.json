@@ -1,5 +1,5 @@
 {
-  "name": "Alternatie Layers",
+  "name": "Alternatie Layers by Out of Sync",
   "description": "Dive into the captivating soundscape of Alternative Layers, a track that playfully dances with its own rhythms.",
   "artist": {
     "name": "Out of Sync",
@@ -9,6 +9,14 @@
     }
   },
   "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Out of Sync"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Music Single"
+    },
     {
       "trait_type": "Genre",
       "value": "Electronic Dance Music"

@@ -1,5 +1,5 @@
 {
-  "name": "Sunshine State",
+  "name": "Sunshine State by Solar Groove",
   "description": "Feel the warmth of Sunshine State, a chill drum and bass track by Solar Groove that radiates positivity and relaxation.",
   "artist": {
     "name": "Solar Groove",
@@ -9,6 +9,14 @@
     }
   },
   "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Solar Groove"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Music Single"
+    },
     {
       "trait_type": "Genre",
       "value": "Electronic Dance Music"

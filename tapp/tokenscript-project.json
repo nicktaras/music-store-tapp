@@ -2,7 +2,7 @@
 	"$schema": "https://tokenscript.org/schemas/project/tokenscript-project.schema.json",
 	"environment": {
 		"default": {
-			"CONTRACT_ADDRESS": "0xaDb146197858950cccdF0DFcD92b014Ae0d642ba",
+			"CONTRACT_ADDRESS": "0x41f1Cd88870fF73b6BF4465Ea6e494F9BEdF67c6",
 			"CONTRACT_CHAIN": "11155111"
 		}
 	}

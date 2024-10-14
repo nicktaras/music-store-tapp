@@ -1,5 +1,5 @@
 {
-  "name": "Chillscape",
+  "name": "Chillscape by Lazy Days",
   "description": "Immerse yourself in the tranquil vibes of Chillscape, a mellow house track that effortlessly blends subtle sounds with an inviting atmosphere. Crafted by Lazy Days.",
   "artist": {
     "name": "Lazy Days",
@@ -9,6 +9,14 @@
     }
   },
   "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "Lazy Days"
+    },
+    {
+      "trait_type": "Type",
+      "value": "Music Single"
+    },
     {
       "trait_type": "Genre",
       "value": "Electronic Dance Music"
